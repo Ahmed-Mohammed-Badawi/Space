@@ -1,0 +1,13 @@
+.Home{
+  display: grid;
+  grid-template-columns: [Scol] repeat(12,1fr) [Ecol];
+  grid-template-rows: [Srow] repeat(10, 1fr) [Erow];
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/Images/Home/Mask.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
