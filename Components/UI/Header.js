@@ -1,48 +1,69 @@
 //IMPORTS
 import classes from './Header.module.scss';
-import {useRouter} from "next/router";
+import {useEffect, useState} from "react";
 //Components
 import Link from "next/link";
 import Image from "next/image";
+import Nav from "./Nav";
+import Sidebar from "./Sidebar";
+import SidebarIcon from "./SidebarIcon";
 
 
 export default function Header() {
+    //Inject in DOM
+    const [showSidebar, setShowSidebar] = useState(false);
+    //Open Sidebar
+    const [SidebarOpen, setSidebarOpen] = useState(false)
 
-    const router = useRouter();
-    console.log(router)
+
+    useEffect(() => {
+        //Resize function
+        function resizeHandler(e) {
+            if (e.currentTarget.innerWidth < 769) {
+                setShowSidebar(true)
+            } else {
+                setShowSidebar(false)
+            }
+        }
+        //Add event listener to window on resize
+        const ResizeListener = window.addEventListener('resize', resizeHandler);
+
+        //Show or Hide Sidebar
+        if (window.innerWidth < 769) {
+            setShowSidebar(true)
+        } else {
+            setShowSidebar(false)
+        }
+        //remove event when component destroy
+        return () => window.removeEventListener('resize', ResizeListener);
+    });
+
+    //OPEN SIDEBAR STATE
+    function openSidebarHandler() {
+        setSidebarOpen(true)
+    }
+
+    //CLOSE SIDEBAR STATE
+    function closeSidebarHandler() {
+        setSidebarOpen(false)
+    }
 
     return (
         <header className={classes.Header}>
+            {/*LOGO*/}
             <div className={classes.Logo}>
                 <Link passHref href={'/'}>
                     <a><Image src={"/Images/Logo/Logo.svg"} width={35} height={35}/></a>
                 </Link>
             </div>
+            {/*LINE*/}
             <div className={classes.Line}> </div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link passHref href={'/'}>
-                            <a className={router.pathname === '/'? classes.active : null}><span>00</span>Home</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link passHref href={'/Destination'}>
-                            <a className={router.pathname === '/Destination'? classes.active : null}><span>01</span>Destination</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link passHref href={'/Crew'}>
-                            <a className={router.pathname === '/Crew'? classes.active : null}><span>02</span>Crew</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link passHref href={'/Technologies'}>
-                            <a className={router.pathname === '/Technologies'? classes.active : null}><span>03</span>Technologies</a>
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            {/*NAVBAR*/}
+            <Nav/>
+            {/*TOGGLE ICON*/}
+            <SidebarIcon open={openSidebarHandler} />
+            {/*SIDEBAR*/}
+            {showSidebar && <Sidebar close={closeSidebarHandler} open={SidebarOpen}/>}
         </header>
     );
 }

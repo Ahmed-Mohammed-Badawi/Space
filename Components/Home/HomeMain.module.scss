@@ -1,100 +1,139 @@
 @import "../../styles/Variables";
 
-.Main{
-  grid-column: 2 / 11;
-  grid-row: 5 / 10;
-  display: flex;
-
-  & > article{
-    flex-basis: 50%;
-    margin-right: 5%;
-
-    & h5{
-      font-size: 2.8rem;
-      color: $Color-Light-Grey;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-
-    & h1{
-    color: $Color-White;
-      font-size: 15rem;
-      margin-bottom: 1.5rem;
-    }
-
-    & p{
-      font-size: 1.8rem;
-      color: $Color-Light-Grey;
-      width: 85%
-    }
-
-  }
-
-  & > div{
-    width: 40%;
+.Main {
+    grid-column: 2 / 12;
+    grid-row: 5 / 10;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    & button{
-      background-color: $Color-White;
-      color: #0B0D17;
-      font-family: $Font-Heading;
-      padding: 3rem;
-      width: 20rem;
-      height: 20rem;
-      border-radius: 50%;
-      font-size: 3rem;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      position: relative;
-      z-index: 2;
-
-      &::before{
-        content: '';
-        width: 24rem;
-        height: 24rem;
-        background-color: rgba($Color-White, .5);
-        border-radius: 50%;
-        position: absolute;
-        top: -2rem;
-        left: -2rem;
-        transform: scale(calc(5/6));
-        transform-origin: center;
-        transition: transform .3s ease;
-        z-index: 1;
-      }
-
-      &::after{
-        content: 'Explore';
-        width: 20rem;
-        height: 20rem;
-        display: flex;
-        justify-content: center;
+    //760px tablet 912px
+    @media only screen and (max-width: 57em) {
+        grid-row: 3 / 10;
+        flex-direction: column;
         align-items: center;
-        position: absolute;
-        top: 0rem;
-        left: 0rem;
-        background-color: transparent;
-        color: black;
-        font-family: $Font-Heading;
-        font-size: 3rem;
-        z-index: 5;
-      }
+        text-align: center;
+    }
 
-      &:hover::before{
-        transform: scale(1);
-      }
+    & > article {
+        flex-basis: 50%;
+        margin-right: 5%;
+        //760px tablet 912px
+        @media only screen and (max-width: 57em) {
+            margin-bottom: 8rem;
+            margin-right: 0;
 
-      &:active::after{
-        transform: scale(1);
-        box-shadow: inset 0rem 0rem .5rem rgba($Color-Main, .5);
-        border-radius: 50%;
-      }
+            & p {
+                margin: auto;
+            }
+        }
+
+        //759px Phone Mode
+        @media only screen and (max-width: 38.75em) {
+            & h5{
+                font-size: 1.6rem !important;
+            }
+            & h1{
+                font-size: 8rem !important;
+            }
+            & p{
+                font-size: 1.5rem !important;
+            }
+        }
+
+        & h5 {
+            font-size: 2.8rem;
+            color: $Color-Light-Grey;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        & h1 {
+            color: $Color-White;
+            font-size: 15rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        & p {
+            font-size: 1.8rem;
+            color: $Color-Light-Grey;
+            width: 85%;
+            //760px tablet 912px
+            @media only screen and (max-width: 57em) {
+                width: 80%;
+            }
+        }
 
     }
-  }
+
+    & > div {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        //759px Phone Mode
+        @media only screen and (max-width: 75em) {
+            width: 100%;
+            justify-content: center;
+        }
+
+        & button {
+            background-color: $Color-White;
+            color: #0B0D17;
+            font-family: $Font-Heading;
+            padding: 3rem;
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            font-size: 3rem;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            position: relative;
+            z-index: 2;
+
+            &::before {
+                content: '';
+                width: 24rem;
+                height: 24rem;
+                background-color: rgba($Color-White, .5);
+                border-radius: 50%;
+                position: absolute;
+                top: -2rem;
+                left: -2rem;
+                transform: scale(calc(5 / 6));
+                transform-origin: center;
+                transition: transform .3s ease;
+                z-index: 1;
+            }
+
+            &::after {
+                content: 'Explore';
+                width: 20rem;
+                height: 20rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0rem;
+                left: 0rem;
+                background-color: transparent;
+                color: black;
+                font-family: $Font-Heading;
+                font-size: 3rem;
+                z-index: 5;
+            }
+
+            &:hover::before {
+                transform: scale(1);
+            }
+
+            &:active::after {
+                transform: scale(1);
+                box-shadow: inset 0rem 0rem .5rem rgba($Color-Main, .5);
+                border-radius: 50%;
+            }
+
+        }
+    }
 
 }
 
