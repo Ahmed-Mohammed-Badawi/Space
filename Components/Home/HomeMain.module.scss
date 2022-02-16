@@ -4,8 +4,8 @@
     display: flex;
     @media only screen and (min-width: $xs) {
         grid-column: 2 / 12;
+        grid-row: 3 / 10;
         flex-direction: column;
-        grid-row-start: 3;
     }
     @media only screen and (min-width: $lg) {
         flex-direction: row;
