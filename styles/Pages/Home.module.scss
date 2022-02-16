@@ -1,10 +1,9 @@
 .Home{
   display: grid;
-  grid-template-columns: [Scol] repeat(12,1fr) [Ecol];
-  grid-template-rows: [Srow] repeat(10, 1fr) [Erow];
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(10, 1fr);
   min-height: 100vh;
-  //height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-image: url("/Images/Home/Mask.webp");
   background-size: cover;
   background-position: center;

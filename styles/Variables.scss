@@ -1,14 +1,22 @@
 //Barlow and belle-fair Fonts Import
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&family=Bellefair&display=swap");
 
 //Fonts
-$Font-Heading:'Bellefair', serif;
-$Font-Text: 'Barlow', sans-serif;
+$Font-Heading: "Bellefair", serif;
+$Font-Text: "Barlow", sans-serif;
 
 //Colors
-$Color-Main: #0B0D17;
-$Color-Light-Grey: #D0D6F9;
+$Color-Main: #0b0d17;
+$Color-Light-Grey: #d0d6f9;
 $Color-White: #ffffff;
 
 //Sizes font
 $Size-Font-Nav-Tablet: 1.3rem;
+
+// Bootstrab Breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;

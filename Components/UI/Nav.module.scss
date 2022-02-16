@@ -1,63 +1,53 @@
 @import "styles/Variables";
 
 .Nav {
-  grid-column: 6 / 12;
-  background-color: rgba($Color-White, .4);
-  flex-basis: auto;
-  width: 60%;
-  //760px tablet 912px
-  @media only screen and (min-width: 48em) and (max-width: 57em){
-    font-size: $Size-Font-Nav-Tablet;
-    height: 100%;
-  }
-  //Hide Navbar in Phone Mode
-  //759px Phone Mode
-  @media only screen and (max-width: 48em) {
     display: none;
-  }
+    background-color: rgba($Color-White, 0.4);
+    width: 60%;
+    @media only screen and (min-width: $md) {
+        display: block;
+        padding-top: 1.5rem;
+    }
+    @media only screen and (min-width: $lg) {
+        padding-top: .75rem;
+    }
 }
 
-
 //Nav Styles
-.Nav > ul{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding-inline: 5rem;
-  //760px tablet 912px
-  @media only screen and (min-width: 48em) and (max-width: 57em){
-    height: 100%;
-  }
-
-  & li{
-    color: $Color-White;
-    font-weight: 500;
-  }
-
-  & li a{
-    display: inline-block;
-    padding: 1rem 0rem 2.5rem;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom .3s ease;
-    //760px tablet 912px
-    @media only screen and (min-width: 48em) and (max-width: 57em){
-      height: 100%;
-      display: block;
+.Nav > ul {
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 2.5rem;
+    font-size: 1.4rem;
+    align-items: center;
+    list-style: none;
+    @media only screen and (min-width: $lg) {
+        justify-content: center;
+        gap: 3rem;
     }
 
-    &:hover{
-      border-bottom: 2px solid rgba($Color-White, .5);
+    & li {
+        color: $Color-White;
+        font-weight: 500;
     }
 
-    &.active{
-      border-bottom: 2px solid $Color-White;
+    & li a {
+        display: inline-block;
+        padding: 1rem 0rem 2.5rem;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s ease;
+
+        &:hover {
+            border-bottom: 2px solid rgba($Color-White, 0.5);
+        }
+
+        &.active {
+            border-bottom: 2px solid $Color-White;
+        }
     }
 
-  }
-
-  & span{
-    margin-right: .5rem;
-    font-weight: bold;
-  }
+    & span {
+        margin-right: 0.5rem;
+        font-weight: bold;
+    }
 }

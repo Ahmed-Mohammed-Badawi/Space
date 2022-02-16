@@ -1,42 +1,20 @@
 @import "../../styles/Variables";
 
 .Main {
-    grid-column: 2 / 12;
-    grid-row: 5 / 10;
     display: flex;
-    //760px tablet 912px
-    @media only screen and (max-width: 57em) {
-        grid-row: 3 / 10;
+    @media only screen and (min-width: $xs) {
+        grid-column: 2 / 12;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        grid-row-start: 3;
     }
-
+    @media only screen and (min-width: $lg) {
+        flex-direction: row;
+        grid-row: 4 / 10;
+    }
+    
     & > article {
+        text-align: center;
         flex-basis: 50%;
-        margin-right: 5%;
-        //760px tablet 912px
-        @media only screen and (max-width: 57em) {
-            margin-bottom: 5rem;
-            margin-right: 0;
-
-            & p {
-                margin: auto;
-            }
-        }
-
-        //759px Phone Mode
-        @media only screen and (max-width: 38.75em) {
-            & h5{
-                font-size: 1.6rem !important;
-            }
-            & h1{
-                font-size: 8rem !important;
-            }
-            & p{
-                font-size: 1.5rem !important;
-            }
-        }
 
         & h5 {
             font-size: 2.8rem;
@@ -55,33 +33,51 @@
         & p {
             font-size: 1.8rem;
             color: $Color-Light-Grey;
-            width: 85%;
-            //760px tablet 912px
-            @media only screen and (max-width: 57em) {
-                width: 80%;
+        }
+
+        @media only screen and (min-width: $xs) and (max-width: $sm){
+
+            & h5{
+                font-size: 1.6rem;
             }
+
+            & h1{
+                font-size: 8rem;
+            }
+
+            & p{
+                font-size: 1.4rem;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: $lg){
+            text-align: left;
         }
 
     }
 
     & > div {
-        width: 40%;
+        width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-        //759px Phone Mode
-        @media only screen and (max-width: 75em) {
-            width: 100%;
-            justify-content: center;
+        margin-top: 5rem;
+        @media only screen and (min-width: $md) {
+            margin-top: 15rem;
+        }
+        @media only screen and (min-width: $lg) {
+            margin-top: 0;
+            justify-content: flex-end;
         }
 
         & button {
             background-color: $Color-White;
-            color: #0B0D17;
+            color: #0b0d17;
             font-family: $Font-Heading;
             padding: 3rem;
-            width: 20rem;
-            height: 20rem;
+            width: 15rem;
+            height: 15rem;
             border-radius: 50%;
             font-size: 3rem;
             cursor: pointer;
@@ -89,26 +85,38 @@
             outline: none;
             position: relative;
             z-index: 2;
-
-            &::before {
-                content: '';
+            @media only screen and (min-width: $md) {
                 width: 24rem;
                 height: 24rem;
-                background-color: rgba($Color-White, .5);
+            }
+
+            &::before {
+                content: "";
+                width: 20rem;
+                height: 20rem;
+                background-color: rgba($Color-White, 0.5);
                 border-radius: 50%;
                 position: absolute;
-                top: -2rem;
-                left: -2rem;
-                transform: scale(calc(5 / 6));
+                top: -2.5rem;
+                left: -2.5rem;
+                transform: scale(calc(3 / 4));
                 transform-origin: center;
-                transition: transform .3s ease;
+                transition: transform 0.3s ease;
                 z-index: 1;
+
+                @media only screen and (min-width: $md) {
+                    transform: scale(calc(6 / 7));
+                    width: 28rem;
+                    height: 28rem;
+                    top: -2rem;
+                    left: -2rem;
+                }
             }
 
             &::after {
-                content: 'Explore';
-                width: 20rem;
-                height: 20rem;
+                content: "Explore";
+                width: 15rem;
+                height: 15rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -120,6 +128,10 @@
                 font-family: $Font-Heading;
                 font-size: 3rem;
                 z-index: 5;
+                @media only screen and (min-width: $md) {
+                    width: 24rem;
+                    height: 24rem;
+                }
             }
 
             &:hover::before {
@@ -128,12 +140,9 @@
 
             &:active::after {
                 transform: scale(1);
-                box-shadow: inset 0rem 0rem .5rem rgba($Color-Main, .5);
+                box-shadow: inset 0rem 0rem 0.5rem rgba($Color-Main, 0.5);
                 border-radius: 50%;
             }
-
         }
     }
-
 }
-
