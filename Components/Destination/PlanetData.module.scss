@@ -1,0 +1,101 @@
+@import "../../styles//Variables.scss";
+
+.PlanetData {
+    text-align: center;
+
+    & h2 {
+        font-family: $Font-Heading;
+        font-size: 5.6rem;
+        font-weight: 100;
+        color: $Color-White;
+        text-transform: uppercase;
+    }
+
+    & > p {
+        font-size: 1.5rem;
+        color: $Color-Light-Grey;
+        width: 85%;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        max-width: 57.3rem;
+        line-height: 1.5;
+    }
+
+    .Container {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #3a3b4b;
+        width: 94%;
+        margin: auto;
+        font-family: $Font-Heading;
+
+        & > div {
+            padding-top: 3rem;
+
+            &:first-child{
+                margin-bottom: 2rem;
+            }
+        }
+
+        & h3 {
+            color: $Color-Light-Grey;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &:not(h3) {
+            color: $Color-White;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+        }
+    }
+
+    @media only screen and (min-width: $md) {
+        .Container {
+            flex-direction: row;
+            justify-content: space-around;
+
+            & > div{
+                padding-top: 4rem;
+            }
+        }
+
+        & h2 {
+            font-size: 8rem;
+            letter-spacing: 0.3rem;
+            line-height: 1.5;
+        }
+
+        & > p {
+            font-size: 1.6rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    
+    @media only screen and (min-width: $lg) {
+        flex-basis: 50%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & h2 {
+            font-family: $Font-Heading;
+            font-size: 5.6rem;
+            font-weight: 100;
+            color: $Color-White;
+            text-transform: uppercase;
+        }
+    
+        & > p {
+            margin: 0;
+            margin-bottom: 5rem;
+        }
+
+        .Container {
+            width: 85%;
+            margin: 0;
+        }
+    }
+}

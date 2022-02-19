@@ -1,0 +1,33 @@
+@import "../../styles//Variables.scss";
+
+.Image {
+    width: 100%;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 17rem !important;
+        height: 17rem !important;
+    }
+
+    @media only screen and (min-width: $md) {
+        margin-bottom: 15rem;
+        & img {
+            width: 30rem !important;
+            height: 30rem !important;
+        }
+    }
+
+    @media only screen and (min-width: $lg) {
+        flex-basis: 50%;
+        margin-bottom: 0;
+        padding: 3rem;
+
+        & img {
+            width: 44.5rem !important;
+            height: 44.5rem !important;
+        }
+    }
+}

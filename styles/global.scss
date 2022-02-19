@@ -4,26 +4,47 @@
 //Global Styles
 *,
 *::after,
-*::before{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{
-  font-size: 62.5%; // Set 1rem to 10px
+html {
+    font-size: 62.5%; // Set 1rem to 10px
 }
 
-body{
-  font-family: $Font-Text;
-  font-size: 1.6rem;
+body {
+    font-family: $Font-Text;
+    font-size: 1.6rem;
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-h1,h2,h3{
-  font-family: $Font-Heading;
+h1,
+h2,
+h3 {
+    font-family: $Font-Heading;
+}
+
+.swiper-pagination {
+    color: white !important;
+    top: 30rem !important;
+    bottom: initial !important;
+
+    @media only screen and (min-width: $md) {
+        top: 46rem !important;
+        
+    }
+
+    @media only screen and (min-width: $lg) {
+        top: 15rem !important;
+        right: 0;
+        left: initial !important;
+        width: 50% !important;
+        text-align: left !important;
+    }
 }

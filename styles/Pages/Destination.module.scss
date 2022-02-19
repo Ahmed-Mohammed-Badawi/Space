@@ -1,0 +1,43 @@
+@import "../Variables.scss";
+
+.Destination {
+    min-height: 100vh;
+    background-image: url("/Images/Destination/background-destination-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 10rem;
+
+    @media only screen and (min-width: $md) {
+        background-image: url("/Images/Destination/background-destination-desktop.jpg");
+    }
+}
+
+.Pagination {
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0.5rem !important;
+    color: $Color-Light-Grey;
+    font-size: 1.4rem;
+    background-color: transparent !important;
+    font-weight: bold;
+    opacity: 1 !important;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid transparent;
+    border-radius: 0 !important;
+    transition: border-bottom .3s ease;
+
+    &:hover {
+        border-bottom: 1px solid $Color-Light-Grey;
+    }
+
+    @media only screen and (min-width: $md) {
+        font-size: 1.6rem;
+    }
+}
+
+.Pagination.PaginationActive {
+    color: $Color-White;
+    border-bottom: 1px solid white;
+}
