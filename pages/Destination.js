@@ -16,7 +16,7 @@ export default function Technologies() {
                     clickable: true,
                     bulletActiveClass: classes.PaginationActive,
                     renderBullet: (index, className) => {
-                        const names = ["Moon", "Mars", "Earth", "Sun"];
+                        const names = ["Moon", "Mars", "EUROPA", "TITAN"];
                         return `<div class="${[className, classes.Pagination].join(' ')}">${names[index]}</div>`;
                     },
                 }}
