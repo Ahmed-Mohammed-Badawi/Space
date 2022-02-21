@@ -1,0 +1,20 @@
+@import '../../styles//Variables.scss';
+
+.Crew{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    color: white;
+    
+    @media only screen and (min-width: $md){
+        flex-direction: column-reverse;
+        gap: 7rem;
+        overflow: hidden;
+    }
+    
+    @media only screen and (min-width: $lg){
+        flex-direction: row-reverse;
+        gap: 7rem;
+        overflow: hidden;
+    }
+}

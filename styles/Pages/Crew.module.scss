@@ -1,0 +1,32 @@
+@import '../Variables.scss';
+
+.Crew{
+    min-height: calc(100vh - 10rem);
+    background-image: url("/Images/Crew/background-crew-mobile.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    padding-top: 10rem;
+
+    & .Meet {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $Color-White;
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+        margin-top: 2rem;
+        text-align: center;
+
+        & span{
+            color: rgba($Color-White, .25);
+            margin-right: 1.5rem;
+        }
+    }
+
+    @media only screen and (min-width: $md){
+        .Meet{
+            text-align: left;
+            margin-left: 3rem;
+        }
+    }
+
+}
