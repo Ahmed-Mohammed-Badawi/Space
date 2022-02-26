@@ -4,17 +4,18 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
-
+    
     img {
         width: 17.7rem !important;
         height: 22.2rem !important;
+        object-fit: contain;
     }
 
     @media only screen and (min-width: $md) {
-        margin-bottom: 7rem;
+        margin-bottom: 0rem;
         img {
             width: 45.6rem !important;
-            height: 57.2rem !important;
+            height: 40rem !important;
         }
     }
 
@@ -22,7 +23,10 @@
         margin-bottom: 0;
         margin-left: 7rem;
         img {
-            object-fit: contain;
+            width: initial !important;
+            height: initial !important;
+            padding-right: 1rem !important;
+
             // width: 56.8rem !important;
             // height: 71.2rem !important;
         }

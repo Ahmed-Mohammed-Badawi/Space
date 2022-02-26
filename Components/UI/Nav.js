@@ -51,7 +51,7 @@ export default function Nav(props) {
                 <li>
                     <Link passHref href={'/Technologies'}>
                         <a
-                            className={router.pathname === '/Crew' ?
+                            className={router.pathname === '/Technologies' ?
                                 navStyleType === 'sidebar' ? sidebarClasses.active : classes.active
                                 : null}
                         >

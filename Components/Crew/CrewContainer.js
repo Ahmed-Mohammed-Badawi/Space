@@ -5,11 +5,15 @@ import CrewImage from "./CrewImage";
 import CrewContent from "./CrewContent";
 
 
-export default function CrewContainer(){
+export default function CrewContainer(props){
+
+
+    const {image, title, name, paragraph} = props;
+
     return(
         <section className={classes.Crew}>
-            <CrewImage image={'/Images/Crew/image-douglas-hurley.webp'} />
-            <CrewContent title={'Commander '} name={"Douglas Hurley"} paragraph={'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.'} />
+            <CrewImage image={image} />
+            <CrewContent title={title} name={name} paragraph={paragraph} />
         </section>
     );
 }

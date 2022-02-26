@@ -23,6 +23,7 @@ export default function Technologies() {
                     pagination={{
                         clickable: true,
                         bulletActiveClass: classes.PaginationActive,
+                        modifierClass: "destination-",
                         renderBullet: (index, className) => {
                             const names = ["Moon", "Mars", "EUROPA", "TITAN"];
                             return `<div class="${[
