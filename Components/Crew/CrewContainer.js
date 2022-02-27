@@ -12,7 +12,7 @@ export default function CrewContainer(props){
 
     return(
         <section className={classes.Crew}>
-            <CrewImage image={image} />
+            <CrewImage title={title} image={image} />
             <CrewContent title={title} name={name} paragraph={paragraph} />
         </section>
     );

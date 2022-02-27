@@ -6,11 +6,11 @@ import Image from 'next/image';
 
 export default function CrewImage(props){
 
-    const {image} = props;
+    const {image, title} = props;
 
     return(
         <div className={classes.Image}>
-            <Image src={image} width={568} height={712} />
+            <Image alt={title} src={image} width={568} height={712} />
         </div>
     );
 }

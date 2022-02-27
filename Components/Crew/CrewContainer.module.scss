@@ -1,17 +1,22 @@
 @import '../../styles//Variables.scss';
 
-.Crew{
+.Crew {
     display: flex;
     flex-direction: column;
     color: white;
-    
-    @media only screen and (min-width: $md){
+    //500px
+    @media only screen and (max-height: 31.25em) {
+        overflow: scroll;
+
+    }
+
+    @media only screen and (min-width: $md) {
         height: calc(100vh - 18.4rem) !important;
         flex-direction: column-reverse;
         justify-content: space-between;
     }
-    
-    @media only screen and (min-width: $lg){
+
+    @media only screen and (min-width: $lg) {
         flex-direction: row-reverse;
     }
 }
