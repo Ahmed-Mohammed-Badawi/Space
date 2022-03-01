@@ -1,0 +1,24 @@
+@import "styles/Variables";
+
+
+.Technologies{
+    min-height: 100vh;
+    padding-top: 10rem;
+    background-image: url("/Images/Technologies/background-technology-mobile.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & .Heading {
+        font-size: 1.6rem;
+        margin: 2rem auto 4rem;
+        text-align: center;
+        color: $Color-White;
+        letter-spacing: 1.5px;
+        & span{
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-right: 1.5rem;
+        }
+    }
+}

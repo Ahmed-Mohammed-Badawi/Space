@@ -1,5 +1,7 @@
+import TechnologiesContainer from "../Components/Technologies/Technologies";
+
 export default function Technologies() {
     return(
-        <h1>Technologies</h1>
+        <TechnologiesContainer />
     )
 }
