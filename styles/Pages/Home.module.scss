@@ -1,12 +1,23 @@
+@import 'styles/Variables';
+
 .Home{
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: repeat(10, 1fr);
   min-height: 100vh;
   width: 100vw;
-  background-image: url("/Images/Home/Mask.webp");
+  background-image: url("/Images/Home/background-home-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+
+  @media only screen and (min-width: $sm) {
+    background-image: url("/Images/Home/background-home-tablet.webp");
+
+  }
+  @media only screen and (min-width: $lg) {
+    background-image: url("/Images/Home/background-home-desktop.webp");
+
+  }
 }

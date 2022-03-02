@@ -33,17 +33,18 @@ h3 {
 //PAGINATION BULLETS
 .destination-bullets {
     color: white !important;
-    top: 30rem !important;
+    top: 21rem !important;
     bottom: initial !important;
     left: 50%;
     transform: translateX(-50%) !important;
+    width: 100%;
 
     @media only screen and (min-width: $md) {
-        top: 46rem !important;
+        top: 37rem !important;
     }
 
     @media only screen and (min-width: $lg) {
-        top: 15rem !important;
+        top: 6rem !important;
         right: 0;
         left: initial !important;
         width: 50% !important;

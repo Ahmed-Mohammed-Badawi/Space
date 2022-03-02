@@ -12,7 +12,7 @@ export default function TechContainer(props) {
             <div className={classes.Image}>
                 <picture>
                     <source media={`(min-width: 992px)`} type="image/webp" srcSet={lgImage} />
-                    <img src={mdImage} alt={'Vehicle'} />
+                    <img src={mdImage} alt={title} />
                 </picture>
             </div>
             <div className={classes.Content}>

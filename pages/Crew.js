@@ -19,9 +19,9 @@ export default function Technologies() {
                       content={'Want to know more about the space explorers ? => It\'s time to Know more about Our Crew'}/>
             </Head>
             <section className={classes.Crew}>
-                <p className={classes.Meet}>
+                <h1 className={classes.Meet}>
                     <span>02</span>Meet Your Crew
-                </p>
+                </h1>
                 <Swiper
                     modules={[Pagination]}
                     pagination={{

@@ -2,13 +2,22 @@
 
 .Crew{
     min-height: 100vh;
-    background-image: url("/Images/Crew/background-crew-mobile.jpg");
+    background-image: url("/Images/Crew/background-crew-mobile.webp");
     background-size: cover;
     background-repeat: repeat;
     padding-top: 10rem;
 
+    @media only screen and (min-width: $sm){
+        background-image: url("/Images/Crew/background-crew-tablet.webp");
+    }
+
+    @media only screen and (min-width: $lg){
+        background-image: url("/Images/Crew/background-crew-desktop.webp");
+    }
+
     & .Meet {
         font-size: 2rem;
+        font-family: $Font-Text;
         font-weight: 500;
         color: $Color-White;
         margin-bottom: 4rem;

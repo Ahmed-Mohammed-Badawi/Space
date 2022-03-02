@@ -10,8 +10,7 @@ export default function Planet(props){
 
     return(
         <section className={classes.Planet}>
-            <p className={classes.Pick}><span>01</span> Pick your destination</p>
-            <PlanetImage 
+            <PlanetImage
                 alt={alt}
                 src={src}
             />

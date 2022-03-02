@@ -15,9 +15,10 @@ export default function Technologies() {
             <Head>
                 <title>Destination</title>
                 <meta name="description" content="Explore Planets and Imagine the Space" />
-                <link rel="canonical" href="https://space-jade.vercel.app"/>
+                <link rel="canonical" href="https://space-jade.vercel.app/Technologies"/>
             </Head>
             <section className={classes.Destination}>
+                <h1 className={classes.Pick}><span>01</span> Pick your destination</h1>
                 <Swiper
                     modules={[Pagination]}
                     pagination={{

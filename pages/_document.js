@@ -7,9 +7,7 @@ class MyDocument extends Document {
         return (
             <Html lang='en'>
                 <Head>
-                    <title>Explore the Space</title>
                     <meta name={'author'} content={'Ahmed Mohammed'}/>
-                    <meta name="viewport" content="width=device-width, initial-scale=1"/>
                     <link rel="icon" href="/Images/Logo/Logo.svg" type="image/x-icon" />
                 </Head>
                 <body>

@@ -2,14 +2,40 @@
 
 .Destination {
     min-height: 100vh;
-    background-image: url("/Images/Destination/background-destination-mobile.jpg");
+    background-image: url("/Images/Destination/background-destination-mobile.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 10rem;
 
-    @media only screen and (min-width: $md) {
-        background-image: url("/Images/Destination/background-destination-desktop.jpg");
+    & .Pick {
+        font-size: 2rem;
+        font-family: $Font-Text;
+        font-weight: 500;
+        color: $Color-White;
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+        margin-left: 2rem;
+        margin-top: 2rem;
+
+        & span{
+            color: rgba($Color-White, .25);
+            margin-right: 1.5rem;
+        }
+    }
+
+    @media only screen and (min-width: $sm) {
+        background-image: url("/Images/Destination/background-destination-tablet.webp");
+    }
+    @media only screen and (min-width: $lg) {
+        background-image: url("/Images/Destination/background-destination-desktop.webp");
+
+        & .Pick{
+            flex-basis: 100%;
+            padding-left: 8rem;
+            margin-top: 10rem;
+            margin-bottom: 0;
+        }
     }
 }
 

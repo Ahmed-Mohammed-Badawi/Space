@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <section className={classes.Home}>
             <Head>
-                <title>Home</title>
+                <title>Space - Home</title>
                 <meta name='description' content='Explore the Space and learn amazing things like planets, technologies, and many more' />
             </Head>
             <HomeMain/>

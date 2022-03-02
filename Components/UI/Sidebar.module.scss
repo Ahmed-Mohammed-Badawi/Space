@@ -5,13 +5,16 @@
     top: 0;
     right: -28rem;
     width: 28rem;
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(2.3rem) brightness(0.8);
+    background-color: #46474e;
+    @supports (backdrop-filter: blur(2.3rem)) {
+        backdrop-filter: blur(2.3rem) brightness(0.8);
+        background-color: rgba(255, 255, 255, 0.25);
+    }
     min-height: 100vh;
     transition: right .3s ease-in-out;
     z-index: 100;
 
-    &.active{
+    &.active {
         right: 0;
     }
 
@@ -21,6 +24,7 @@
         background-color: transparent;
         position: relative;
         margin: .75rem .75rem 5rem auto;
+        cursor: pointer;
 
         & > span {
             position: absolute;
@@ -59,6 +63,7 @@
             padding: 1rem;
             display: inline-block;
             letter-spacing: 1px;
+
             & span {
                 margin-right: 2.5rem;
                 font-weight: bold;

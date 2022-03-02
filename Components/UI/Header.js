@@ -53,7 +53,7 @@ export default function Header() {
             {/*LOGO*/}
             <div className={classes.Logo}>
                 <Link passHref href={'/'}>
-                    <a><Image src={"/Images/Logo/Logo.svg"} alt='Logo' width={35} height={35}/></a>
+                    <a><Image src={"/Images/Logo/Logo.svg"} alt='Star Logo' width={35} height={35}/></a>
                 </Link>
             </div>
             {/*LINE*/}

@@ -19,6 +19,7 @@
         text-align: center;
 
         & .Title {
+            font-family: $Font-Text;
             color: $Color-Light-Grey;
             font-size: 1.4rem;
             margin-bottom: 1rem;
@@ -42,7 +43,6 @@
         @media only screen and (min-width: $md) {
             & .Title {
                 font-size: 2rem;
-                font-family: $Font-Text;
             }
             & .Name {
                 font-size: 4rem;
@@ -62,16 +62,16 @@
             align-items: center;
             min-height: calc(100vh - 19.7rem);
 
-            & .Image{
+            & .Image {
                 grid-column: 3 / -1;
                 margin-bottom: initial;
             }
 
-            & .Content{
+            & .Content {
                 grid-column: 2 / 3;
                 text-align: left;
 
-                & .Paragraph{
+                & .Paragraph {
                     padding: 0;
                 }
             }
